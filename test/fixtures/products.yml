@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  price: 9.99
-  description: MyText
+  name: Ruby Mug
+  price: 12.50
+  description: A mug for Rubyists.
 
 two:
-  name: MyString
-  price: 9.99
-  description: MyText
+  name: Rails T-Shirt
+  price: 24.00
+  description: Red, of course.
