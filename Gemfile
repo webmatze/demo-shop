@@ -56,3 +56,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# json 3.x bricht ActiveSupport 8.1 (JSON.parse mit Options-Hash).
+gem "json", "~> 2.21"
