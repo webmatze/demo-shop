@@ -17,5 +17,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_09_20_142224) do
     t.string "name"
     t.decimal "price", precision: 8, scale: 2
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_products_on_name", unique: true
   end
 end
