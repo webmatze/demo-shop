@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  belongs_to :category, optional: true
+
   normalizes :name, with: ->(name) { name.strip.squeeze(" ") }
 
   validates :name, presence: true, uniqueness: { case_sensitive: false }

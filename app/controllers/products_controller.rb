@@ -22,6 +22,11 @@ class ProductsController < ApplicationController
   # POST /products
   def create
     @product = Product.new(product_params)
+    if params.dig(:product, :category_name).present?
+      name = params[:product][:category_name].strip
+      category = Category.find_by(name: name) || Category.create(name: name)
+      @product.category = category
+    end
 
     if @product.save
       redirect_to @product, notice: "Product was successfully created."
