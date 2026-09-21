@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
-    @product = Product.new
+    @product = ProductForm.new
   end
 
   # GET /products/1/edit
@@ -21,15 +21,10 @@ class ProductsController < ApplicationController
 
   # POST /products
   def create
-    @product = Product.new(product_params)
-    if params.dig(:product, :category_name).present?
-      name = params[:product][:category_name].strip
-      category = Category.find_by(name: name) || Category.create(name: name)
-      @product.category = category
-    end
+    @product = ProductForm.new(form_params)
 
     if @product.save
-      redirect_to @product, notice: "Product was successfully created."
+      redirect_to products_path, notice: "Product was successfully created."
     else
       render :new, status: :unprocessable_content
     end
@@ -54,6 +49,10 @@ class ProductsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params.expect(:id))
+    end
+
+    def form_params
+      params.expect(product: [ :name, :price, :description, :category_name ])
     end
 
     # Only allow a list of trusted parameters through.
