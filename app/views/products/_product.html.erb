@@ -19,4 +19,9 @@
     <%= product.category&.name || "—" %>
   </p>
 
+  <p>
+    <strong>Catalog:</strong>
+    <%= product.synced_at ? "synced #{product.synced_at.strftime('%H:%M:%S')}" : "pending …" %>
+  </p>
+
 </div>

@@ -7,4 +7,5 @@ class Product < ApplicationRecord
   validates :price, presence: true, numericality: { greater_than: 0 }
 
   after_create_commit { CatalogSyncJob.perform_later(self) }
+
 end

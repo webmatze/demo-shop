@@ -8,6 +8,7 @@ class CatalogSync
     File.open(Rails.root.join("tmp/catalog.log"), "a") do |f|
       f.puts "synced #{product.name} at #{Time.current.strftime('%H:%M:%S')}"
     end
+    product.update!(synced_at: Time.current)
     true
   end
 end
