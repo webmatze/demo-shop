@@ -8,4 +8,5 @@ class Product < ApplicationRecord
 
   after_create_commit { CatalogSyncJob.perform_later(self) }
 
+  broadcasts_to ->(_product) { "products" }, inserts_by: :prepend
 end
