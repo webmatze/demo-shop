@@ -1,0 +1,15 @@
+<% content_for :title, "Compliance" %>
+
+<h1>Payout queue</h1>
+
+<%= turbo_stream_from "payouts" %>
+
+<div class="actions">
+  <%= button_to "Three new requests", simulate_payouts_path, class: "button" %>
+</div>
+
+<div id="payout_requests">
+  <% @requests.each do |request| %>
+    <%= render request %>
+  <% end %>
+</div>

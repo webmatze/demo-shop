@@ -10,12 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_09_26_111556) do
+ActiveRecord::Schema[8.1].define(version: 2026_10_02_090000) do
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "name"
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_categories_on_name", unique: true
+  end
+
+  create_table "payout_requests", force: :cascade do |t|
+    t.integer "amount", null: false
+    t.datetime "created_at", null: false
+    t.float "probability"
+    t.string "reason"
+    t.string "request_country"
+    t.integer "seller_id", null: false
+    t.string "state", default: "open", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "via_proxy", default: false, null: false
+    t.index ["seller_id"], name: "index_payout_requests_on_seller_id"
+    t.index ["state"], name: "index_payout_requests_on_state"
   end
 
   create_table "products", force: :cascade do |t|
@@ -30,5 +44,18 @@ ActiveRecord::Schema[8.1].define(version: 2026_09_26_111556) do
     t.index ["name"], name: "index_products_on_name", unique: true
   end
 
+  create_table "sellers", force: :cascade do |t|
+    t.integer "account_age_days", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.integer "days_since_last_order", default: 0, null: false
+    t.integer "iban_changed_hours_ago"
+    t.integer "lifetime_sales", default: 0, null: false
+    t.string "login_country"
+    t.string "name", null: false
+    t.integer "orders", default: 0, null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "payout_requests", "sellers"
   add_foreign_key "products", "categories"
 end

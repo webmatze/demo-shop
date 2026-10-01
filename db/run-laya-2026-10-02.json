@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1336,
+    "ms": 214
+  },
+  {
+    "id": 2,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1912,
+    "ms": 207
+  },
+  {
+    "id": 3,
+    "profile": "new_but_real",
+    "fraud": false,
+    "p": 0.1752,
+    "ms": 214
+  },
+  {
+    "id": 4,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.3276,
+    "ms": 222
+  },
+  {
+    "id": 5,
+    "profile": "mule",
+    "fraud": true,
+    "p": 0.4183,
+    "ms": 218
+  },
+  {
+    "id": 6,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1362,
+    "ms": 228
+  },
+  {
+    "id": 7,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.3064,
+    "ms": 209
+  },
+  {
+    "id": 8,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.4053,
+    "ms": 284
+  },
+  {
+    "id": 9,
+    "profile": "travelling",
+    "fraud": false,
+    "p": 0.2152,
+    "ms": 273
+  },
+  {
+    "id": 10,
+    "profile": "travelling",
+    "fraud": false,
+    "p": 0.1603,
+    "ms": 257
+  },
+  {
+    "id": 11,
+    "profile": "travelling",
+    "fraud": false,
+    "p": 0.2172,
+    "ms": 250
+  },
+  {
+    "id": 12,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1491,
+    "ms": 215
+  },
+  {
+    "id": 13,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1914,
+    "ms": 261
+  },
+  {
+    "id": 14,
+    "profile": "travelling",
+    "fraud": false,
+    "p": 0.1428,
+    "ms": 224
+  },
+  {
+    "id": 15,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.4218,
+    "ms": 229
+  },
+  {
+    "id": 16,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1455,
+    "ms": 220
+  },
+  {
+    "id": 17,
+    "profile": "bank_change",
+    "fraud": false,
+    "p": 0.1751,
+    "ms": 224
+  },
+  {
+    "id": 18,
+    "profile": "mule",
+    "fraud": true,
+    "p": 0.302,
+    "ms": 232
+  },
+  {
+    "id": 19,
+    "profile": "mule",
+    "fraud": true,
+    "p": 0.4376,
+    "ms": 226
+  },
+  {
+    "id": 20,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.3195,
+    "ms": 209
+  },
+  {
+    "id": 21,
+    "profile": "mule",
+    "fraud": true,
+    "p": 0.3126,
+    "ms": 220
+  },
+  {
+    "id": 22,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.2738,
+    "ms": 217
+  },
+  {
+    "id": 23,
+    "profile": "mule",
+    "fraud": true,
+    "p": 0.6343,
+    "ms": 218
+  },
+  {
+    "id": 24,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.3561,
+    "ms": 226
+  },
+  {
+    "id": 25,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1869,
+    "ms": 234
+  },
+  {
+    "id": 26,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1979,
+    "ms": 216
+  },
+  {
+    "id": 27,
+    "profile": "new_but_real",
+    "fraud": false,
+    "p": 0.1928,
+    "ms": 213
+  },
+  {
+    "id": 28,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1664,
+    "ms": 235
+  },
+  {
+    "id": 29,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1677,
+    "ms": 212
+  },
+  {
+    "id": 30,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1491,
+    "ms": 214
+  },
+  {
+    "id": 31,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.3848,
+    "ms": 245
+  },
+  {
+    "id": 32,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.3938,
+    "ms": 260
+  },
+  {
+    "id": 33,
+    "profile": "new_but_real",
+    "fraud": false,
+    "p": 0.1945,
+    "ms": 212
+  },
+  {
+    "id": 34,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.1677,
+    "ms": 217
+  },
+  {
+    "id": 35,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1253,
+    "ms": 218
+  },
+  {
+    "id": 36,
+    "profile": "travelling",
+    "fraud": false,
+    "p": 0.1528,
+    "ms": 213
+  },
+  {
+    "id": 37,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.147,
+    "ms": 207
+  },
+  {
+    "id": 38,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1405,
+    "ms": 214
+  },
+  {
+    "id": 39,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.2111,
+    "ms": 211
+  },
+  {
+    "id": 40,
+    "profile": "travelling",
+    "fraud": false,
+    "p": 0.204,
+    "ms": 220
+  },
+  {
+    "id": 41,
+    "profile": "new_but_real",
+    "fraud": false,
+    "p": 0.129,
+    "ms": 214
+  },
+  {
+    "id": 42,
+    "profile": "bank_change",
+    "fraud": false,
+    "p": 0.1907,
+    "ms": 216
+  },
+  {
+    "id": 43,
+    "profile": "bank_change",
+    "fraud": false,
+    "p": 0.1578,
+    "ms": 215
+  },
+  {
+    "id": 44,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1177,
+    "ms": 228
+  },
+  {
+    "id": 45,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.2004,
+    "ms": 226
+  },
+  {
+    "id": 46,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.3355,
+    "ms": 236
+  },
+  {
+    "id": 47,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.2592,
+    "ms": 226
+  },
+  {
+    "id": 48,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1344,
+    "ms": 228
+  },
+  {
+    "id": 49,
+    "profile": "travelling",
+    "fraud": false,
+    "p": 0.1602,
+    "ms": 229
+  },
+  {
+    "id": 50,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1725,
+    "ms": 226
+  },
+  {
+    "id": 51,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.2516,
+    "ms": 209
+  },
+  {
+    "id": 52,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1932,
+    "ms": 216
+  },
+  {
+    "id": 53,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.438,
+    "ms": 224
+  },
+  {
+    "id": 54,
+    "profile": "new_but_real",
+    "fraud": false,
+    "p": 0.2362,
+    "ms": 208
+  },
+  {
+    "id": 55,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.1563,
+    "ms": 208
+  },
+  {
+    "id": 56,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.2343,
+    "ms": 215
+  },
+  {
+    "id": 57,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.1943,
+    "ms": 211
+  },
+  {
+    "id": 58,
+    "profile": "bank_change",
+    "fraud": false,
+    "p": 0.1786,
+    "ms": 211
+  },
+  {
+    "id": 59,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1378,
+    "ms": 224
+  },
+  {
+    "id": 60,
+    "profile": "new_but_real",
+    "fraud": false,
+    "p": 0.2079,
+    "ms": 212
+  },
+  {
+    "id": 61,
+    "profile": "mule",
+    "fraud": true,
+    "p": 0.4394,
+    "ms": 215
+  },
+  {
+    "id": 62,
+    "profile": "mule",
+    "fraud": true,
+    "p": 0.3128,
+    "ms": 225
+  },
+  {
+    "id": 63,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1457,
+    "ms": 222
+  },
+  {
+    "id": 64,
+    "profile": "new_but_real",
+    "fraud": false,
+    "p": 0.1516,
+    "ms": 212
+  },
+  {
+    "id": 65,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1941,
+    "ms": 224
+  },
+  {
+    "id": 66,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.422,
+    "ms": 217
+  },
+  {
+    "id": 67,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.3792,
+    "ms": 215
+  },
+  {
+    "id": 68,
+    "profile": "new_but_real",
+    "fraud": false,
+    "p": 0.1425,
+    "ms": 222
+  },
+  {
+    "id": 69,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.1601,
+    "ms": 217
+  },
+  {
+    "id": 70,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1477,
+    "ms": 212
+  },
+  {
+    "id": 71,
+    "profile": "mule",
+    "fraud": true,
+    "p": 0.3492,
+    "ms": 216
+  },
+  {
+    "id": 72,
+    "profile": "bank_change",
+    "fraud": false,
+    "p": 0.2547,
+    "ms": 215
+  },
+  {
+    "id": 73,
+    "profile": "bank_change",
+    "fraud": false,
+    "p": 0.1848,
+    "ms": 209
+  },
+  {
+    "id": 74,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1268,
+    "ms": 209
+  },
+  {
+    "id": 75,
+    "profile": "bank_change",
+    "fraud": false,
+    "p": 0.168,
+    "ms": 215
+  },
+  {
+    "id": 76,
+    "profile": "new_but_real",
+    "fraud": false,
+    "p": 0.1678,
+    "ms": 242
+  },
+  {
+    "id": 77,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1567,
+    "ms": 220
+  },
+  {
+    "id": 78,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.3054,
+    "ms": 224
+  },
+  {
+    "id": 79,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1369,
+    "ms": 210
+  },
+  {
+    "id": 80,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1475,
+    "ms": 212
+  },
+  {
+    "id": 81,
+    "profile": "travelling",
+    "fraud": false,
+    "p": 0.1532,
+    "ms": 223
+  },
+  {
+    "id": 82,
+    "profile": "mule",
+    "fraud": true,
+    "p": 0.3657,
+    "ms": 217
+  },
+  {
+    "id": 83,
+    "profile": "travelling",
+    "fraud": false,
+    "p": 0.1643,
+    "ms": 263
+  },
+  {
+    "id": 84,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1516,
+    "ms": 208
+  },
+  {
+    "id": 85,
+    "profile": "new_but_real",
+    "fraud": false,
+    "p": 0.1556,
+    "ms": 205
+  },
+  {
+    "id": 86,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1745,
+    "ms": 217
+  },
+  {
+    "id": 87,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.5336,
+    "ms": 220
+  },
+  {
+    "id": 88,
+    "profile": "mule",
+    "fraud": true,
+    "p": 0.3637,
+    "ms": 268
+  },
+  {
+    "id": 89,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1326,
+    "ms": 230
+  },
+  {
+    "id": 90,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1476,
+    "ms": 217
+  },
+  {
+    "id": 91,
+    "profile": "bank_change",
+    "fraud": false,
+    "p": 0.2032,
+    "ms": 281
+  },
+  {
+    "id": 92,
+    "profile": "travelling",
+    "fraud": false,
+    "p": 0.1456,
+    "ms": 259
+  },
+  {
+    "id": 93,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.153,
+    "ms": 210
+  },
+  {
+    "id": 94,
+    "profile": "bank_change",
+    "fraud": false,
+    "p": 0.2046,
+    "ms": 207
+  },
+  {
+    "id": 95,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.2307,
+    "ms": 213
+  },
+  {
+    "id": 96,
+    "profile": "bank_change",
+    "fraud": false,
+    "p": 0.2041,
+    "ms": 260
+  },
+  {
+    "id": 97,
+    "profile": "fast_cash",
+    "fraud": true,
+    "p": 0.2852,
+    "ms": 208
+  },
+  {
+    "id": 98,
+    "profile": "mule",
+    "fraud": true,
+    "p": 0.3989,
+    "ms": 226
+  },
+  {
+    "id": 99,
+    "profile": "takeover",
+    "fraud": true,
+    "p": 0.3995,
+    "ms": 217
+  },
+  {
+    "id": 100,
+    "profile": "established",
+    "fraud": false,
+    "p": 0.1659,
+    "ms": 213
+  }
+]

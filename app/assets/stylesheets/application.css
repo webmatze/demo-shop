@@ -65,3 +65,16 @@ button.danger { background: transparent; color: var(--red); border-color: var(--
 .card strong { color: var(--muted); font-weight: 600; margin-right: 0.4rem; }
 .actions { margin-top: 1.25rem; display: flex; gap: 0.75rem; align-items: center; }
 code, pre { font-family: var(--mono); font-size: 0.95em; }
+
+/* Payout queue: the state has to be readable from across the room. */
+.card.payout { display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap; border-left: 5px solid var(--line); }
+.card.payout .amount { font-family: var(--mono); font-weight: 600; }
+.card.payout .state { text-transform: uppercase; font-size: 0.78em; letter-spacing: 0.06em; font-weight: 700; }
+.card.payout .p { font-family: var(--mono); color: var(--muted); }
+.card.payout .reason { flex-basis: 100%; color: var(--muted); font-size: 0.92em; }
+.card.payout.approved { border-left-color: var(--green); }
+.card.payout.approved .state { color: var(--green); }
+.card.payout.review { border-left-color: var(--yellow); }
+.card.payout.review .state { color: var(--yellow); }
+.card.payout.blocked { border-left-color: var(--red); }
+.card.payout.blocked .state { color: var(--red); }

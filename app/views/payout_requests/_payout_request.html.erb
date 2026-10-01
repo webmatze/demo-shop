@@ -1,0 +1,9 @@
+<div class="card payout <%= payout_request.state %>" id="<%= dom_id(payout_request) %>">
+  <strong><%= payout_request.seller.name %></strong>
+  <span class="amount"><%= number_to_currency(payout_request.amount, unit: "EUR ", precision: 0) %></span>
+  <span class="state"><%= payout_request.state %></span>
+  <% if payout_request.probability %>
+    <span class="p">p = <%= number_with_precision(payout_request.probability, precision: 2) %></span>
+  <% end %>
+  <p class="reason"><%= payout_request.reason %></p>
+</div>

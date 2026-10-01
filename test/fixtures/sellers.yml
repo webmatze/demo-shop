@@ -1,0 +1,15 @@
+veteran:
+  name: Clara Wolf
+  account_age_days: 1274
+  orders: 356
+  lifetime_sales: 73692
+  days_since_last_order: 1
+  login_country: Germany
+
+newcomer:
+  name: Max Brandt
+  account_age_days: 6
+  orders: 1
+  lifetime_sales: 25
+  days_since_last_order: 0
+  login_country: Germany

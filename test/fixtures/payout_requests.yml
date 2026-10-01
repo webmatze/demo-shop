@@ -1,0 +1,13 @@
+clean:
+  seller: veteran
+  amount: 607
+  request_country: Germany
+  via_proxy: false
+  state: open
+
+hijacked:
+  seller: newcomer
+  amount: 2417
+  request_country: Brazil
+  via_proxy: true
+  state: open
