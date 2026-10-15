@@ -1,0 +1,2 @@
+<%= turbo_stream.replace dom_id(@order), partial: "orders/order", locals: { order: @order } %>
+<%= turbo_stream.replace dom_id(@order, :coupon), partial: "coupons/form", locals: { order: @order } %>
