@@ -22,3 +22,6 @@ JSON.parse(File.read(Rails.root.join("db/payouts.json"))).first(8).each do |row|
   seller.payout_requests.create!(amount: row["amount"], request_country: row["request_country"],
                                  via_proxy: row["via_proxy"])
 end
+
+# One order, so the orders page is not empty.
+Order.find_or_create_by!(product: Product.find_by!(name: "Ruby Mug")) { |o| o.quantity = 2 }

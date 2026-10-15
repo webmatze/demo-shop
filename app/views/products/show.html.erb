@@ -3,6 +3,7 @@
 <%= render @product %>
 
 <div class="actions">
+  <%= button_to "Buy", orders_path, params: { order: { product_id: @product.id, quantity: 1 } }, class: "button" %>
   <%= link_to "Edit this product", edit_product_path(@product) %> 
   <%= link_to "Back to products", products_path %>
 

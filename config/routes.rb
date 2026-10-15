@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :products
+  resources :orders, only: %i[ index show create ]
   resources :payouts, only: :index do
     post :simulate, on: :collection
   end

@@ -1,0 +1,12 @@
+<% content_for :title, "Order ##{@order.id}" %>
+
+<p class="notice"><%= notice %></p>
+
+<h1>Order #<%= @order.id %></h1>
+
+<%= render @order %>
+
+<div class="actions">
+  <%= link_to "All orders", orders_path %>
+  <%= link_to "Back to products", products_path %>
+</div>

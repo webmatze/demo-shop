@@ -1,0 +1,16 @@
+<div id="<%= dom_id order %>" class="card">
+  <p>
+    <strong>Order:</strong>
+    <%= link_to "##{order.id}", order %>
+  </p>
+
+  <p>
+    <strong>Product:</strong>
+    <%= order.product.name %> × <%= order.quantity %>
+  </p>
+
+  <p>
+    <strong>Total:</strong>
+    <%= number_to_currency order.total %>
+  </p>
+</div>
