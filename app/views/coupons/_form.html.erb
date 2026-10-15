@@ -1,0 +1,11 @@
+<div id="<%= dom_id order, :coupon %>">
+  <%= form_with url: order_coupon_path(order), class: "actions" do |form| %>
+    <%= form.label :code, "Coupon code" %>
+    <%= form.text_field :code %>
+    <%= form.submit "Redeem", class: "button" %>
+  <% end %>
+
+  <% order.errors.full_messages_for(:coupon).each do |message| %>
+    <p class="notice"><%= message %></p>
+  <% end %>
+</div>
