@@ -1,7 +1,7 @@
 # Brief: coupon codes
 
 Customers can redeem a coupon code on an order. A code works once.
-A second redemption of the same code must fail, also under concurrency.
+A second redemption of the same code must fail.
 
 ## Contract
 
