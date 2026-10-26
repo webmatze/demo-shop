@@ -9,6 +9,13 @@
     <%= order.product.name %> × <%= order.quantity %>
   </p>
 
+  <% if order.coupon %>
+    <p>
+      <strong>Coupon:</strong>
+      <%= order.coupon.code %> (−<%= order.coupon.percent_off %>%)
+    </p>
+  <% end %>
+
   <p>
     <strong>Total:</strong>
     <%= number_to_currency order.total %>

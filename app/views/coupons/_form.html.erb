@@ -1,0 +1,23 @@
+<div id="coupon_form">
+  <% if order.errors[:coupon].any? %>
+    <div class="errors">
+      <ul>
+        <% order.errors.full_messages_for(:coupon).each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if order.coupon %>
+    <p class="notice">Coupon <%= order.coupon.code %> applied (<%= order.coupon.percent_off %>% off).</p>
+  <% else %>
+    <%= form_with url: order_coupon_path(order) do |form| %>
+      <div>
+        <%= form.label :code, "Coupon code" %>
+        <%= form.text_field :code %>
+      </div>
+      <%= form.submit "Apply coupon" %>
+    <% end %>
+  <% end %>
+</div>

@@ -6,6 +6,8 @@
 
 <%= render @order %>
 
+<%= render "coupons/form", order: @order %>
+
 <div class="actions">
   <%= link_to "All orders", orders_path %>
   <%= link_to "Back to products", products_path %>
