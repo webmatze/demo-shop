@@ -1,0 +1,9 @@
+# Codes are stored upcased.
+
+welcome10:
+  code: WELCOME10
+  percent_off: 10
+
+half:
+  code: HALF
+  percent_off: 50

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_10_15_112221) do
+ActiveRecord::Schema[8.1].define(version: 2026_10_26_185353) do
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "name"
@@ -18,12 +18,22 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_15_112221) do
     t.index ["name"], name: "index_categories_on_name", unique: true
   end
 
+  create_table "coupons", force: :cascade do |t|
+    t.string "code", null: false
+    t.datetime "created_at", null: false
+    t.integer "percent_off", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_coupons_on_code", unique: true
+  end
+
   create_table "orders", force: :cascade do |t|
+    t.integer "coupon_id"
     t.datetime "created_at", null: false
     t.integer "product_id", null: false
     t.integer "quantity", default: 1, null: false
     t.decimal "total", precision: 8, scale: 2, null: false
     t.datetime "updated_at", null: false
+    t.index ["coupon_id"], name: "index_orders_on_coupon_id", unique: true
     t.index ["product_id"], name: "index_orders_on_product_id"
   end
 
@@ -65,6 +75,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_15_112221) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "orders", "coupons"
   add_foreign_key "orders", "products"
   add_foreign_key "payout_requests", "sellers"
   add_foreign_key "products", "categories"
