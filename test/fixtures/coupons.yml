@@ -1,0 +1,7 @@
+welcome:
+  code: WELCOME10
+  percent_off: 10
+
+save20:
+  code: SAVE20
+  percent_off: 20

@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_10_15_112221) do
+ActiveRecord::Schema[8.1].define(version: 2026_10_26_120000) do
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "name"
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_categories_on_name", unique: true
+  end
+
+  create_table "coupons", force: :cascade do |t|
+    t.string "code", null: false
+    t.datetime "created_at", null: false
+    t.integer "order_id"
+    t.integer "percent_off", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_coupons_on_code", unique: true
+    t.index ["order_id"], name: "index_coupons_on_order_id", unique: true
   end
 
   create_table "orders", force: :cascade do |t|
@@ -65,6 +75,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_15_112221) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "coupons", "orders"
   add_foreign_key "orders", "products"
   add_foreign_key "payout_requests", "sellers"
   add_foreign_key "products", "categories"

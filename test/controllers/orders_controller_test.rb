@@ -21,4 +21,20 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "#orders .card", 1
   end
+  test "order page has a coupon form" do
+    order = Order.create!(product: products(:one), quantity: 1)
+    get order_path(order)
+    assert_response :success
+    assert_select "form[action=?]", apply_coupon_order_path(order)
+    assert_select "input[name=?]", "code"
+  end
+
+  test "applying a coupon via turbo stream updates the total" do
+    order = Order.create!(product: products(:one), quantity: 2)
+    post apply_coupon_order_path(order), params: { code: "WELCOME10" }, as: :turbo_stream
+    assert_response :success
+    assert_equal Mime[:turbo_stream], response.media_type
+    assert_match "$22.50", response.body
+    assert_match /<turbo-stream/, response.body
+  end
 end

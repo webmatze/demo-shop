@@ -1,0 +1,21 @@
+<div id="coupon_form">
+  <div id="coupon_form_order_<%= order.id %>">
+    <%= form_with url: apply_coupon_order_path(order), method: :post do |f| %>
+      <div>
+        <%= label_tag :code, "Coupon code" %>
+        <%= text_field_tag :code %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Apply coupon", class: "button" %>
+      </div>
+    <% end %>
+
+    <div id="coupon_error">
+      <div id="coupon_error_order_<%= order.id %>">
+        <% if order.errors[:coupon].present? %>
+          <p class="notice"><%= order.errors[:coupon].to_sentence %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
