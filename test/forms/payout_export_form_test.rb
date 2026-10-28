@@ -37,4 +37,14 @@ class PayoutExportFormTest < ActiveSupport::TestCase
     assert form.errors[:starts_on].any?
     assert form.errors[:ends_on].any?
   end
+
+  test "unparseable dates are rejected without creating an export" do
+    form = PayoutExportForm.new(seller: @seller, starts_on: "not a date", ends_on: "2026-09-31")
+
+    assert_no_difference -> { PayoutExport.count } do
+      assert_no_enqueued_jobs { assert_not form.save }
+    end
+    assert form.errors[:starts_on].any?
+    assert form.errors[:ends_on].any?
+  end
 end

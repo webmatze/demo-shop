@@ -1,0 +1,35 @@
+<% content_for :title, "Payout exports" %>
+
+<h1>Payout exports for <%= @seller.name %></h1>
+<p class="notice"><%= notice %></p>
+
+<%= turbo_stream_from @seller, :payout_exports %>
+
+<%= form_with model: @form, scope: :payout_export, url: seller_payout_exports_path(@seller) do |form| %>
+  <% if @form.errors.any? %>
+    <div class="errors">
+      <h2><%= pluralize(@form.errors.count, "error") %> prohibited this export from being requested:</h2>
+      <ul>
+        <% @form.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :starts_on %>
+    <%= form.date_field :starts_on %>
+  </div>
+  <div>
+    <%= form.label :ends_on %>
+    <%= form.date_field :ends_on %>
+  </div>
+  <div class="actions">
+    <%= form.submit "Request export", class: "button" %>
+  </div>
+<% end %>
+
+<div id="payout_exports">
+  <%= render @exports %>
+</div>

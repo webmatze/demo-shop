@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_10_26_185353) do
+ActiveRecord::Schema[8.1].define(version: 2026_10_28_120000) do
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "name"
@@ -35,6 +35,16 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_26_185353) do
     t.datetime "updated_at", null: false
     t.index ["coupon_id"], name: "index_orders_on_coupon_id", unique: true
     t.index ["product_id"], name: "index_orders_on_product_id"
+  end
+
+  create_table "payout_exports", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.text "csv"
+    t.date "ends_on", null: false
+    t.integer "seller_id", null: false
+    t.date "starts_on", null: false
+    t.datetime "updated_at", null: false
+    t.index ["seller_id"], name: "index_payout_exports_on_seller_id"
   end
 
   create_table "payout_requests", force: :cascade do |t|
@@ -77,6 +87,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_26_185353) do
 
   add_foreign_key "orders", "coupons"
   add_foreign_key "orders", "products"
+  add_foreign_key "payout_exports", "sellers"
   add_foreign_key "payout_requests", "sellers"
   add_foreign_key "products", "categories"
 end
