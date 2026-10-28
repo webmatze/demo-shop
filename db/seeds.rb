@@ -25,3 +25,26 @@ end
 
 # One order, so the orders page is not empty.
 Order.find_or_create_by!(product: Product.find_by!(name: "Ruby Mug")) { |o| o.quantity = 2 }
+
+# Two sellers with a payout history over several months, for the payout
+# export: Clara gets paid every few weeks, Max is new and was stopped once.
+{
+  "Clara Wolf" => { account_age_days: 1274, orders: 356, lifetime_sales: 73692, days_since_last_order: 1,
+                    login_country: "Germany",
+                    payouts: [["2026-08-04", 412, "approved"], ["2026-08-25", 389, "approved"],
+                              ["2026-09-03", 607, "approved"], ["2026-09-22", 451, "approved"],
+                              ["2026-10-06", 528, "review"]] },
+  "Max Brandt" => { account_age_days: 6, orders: 1, lifetime_sales: 25, days_since_last_order: 0,
+                    login_country: "Germany",
+                    payouts: [["2026-09-14", 2417, "blocked"], ["2026-10-02", 120, "open"]] }
+}.each do |name, attrs|
+  payouts = attrs.delete(:payouts)
+  seller = Seller.find_or_create_by!(name: name) { |s| s.assign_attributes(attrs) }
+  next if seller.payout_requests.any?
+
+  payouts.each do |day, amount, state|
+    at = Time.zone.parse("#{day} 10:00")
+    seller.payout_requests.create!(amount: amount, state: state, request_country: attrs[:login_country],
+                                   created_at: at, updated_at: at)
+  end
+end

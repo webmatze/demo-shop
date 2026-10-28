@@ -21,8 +21,7 @@ Rails 8.1, Ruby 3.3.6, SQLite, Minitest, Hotwire. No Node.
 
 ## Working rules
 
-- Work only in your own worktree. Never touch another agent's directory.
-- Stay inside the files your brief gives you. Anything else: ask the chief.
+- Stay inside the scope of your brief.
 - One commit per task, message in English, imperative.
 - Never push, never merge, never edit `db/schema.rb` by hand.
 - "Done" means: you ran `bin/rails test`, it is green, and you paste the
