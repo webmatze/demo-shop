@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :payouts, only: :index do
     post :simulate, on: :collection
   end
+  resources :sellers, only: [] do
+    resources :payout_exports, only: %i[ index create show ]
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
