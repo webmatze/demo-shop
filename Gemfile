@@ -59,3 +59,6 @@ end
 
 # json 3.x bricht ActiveSupport 8.1 (JSON.parse mit Options-Hash).
 gem "json", "~> 2.21"
+
+# Ab Ruby 3.4 kein Standard-Gem mehr; ohne Eintrag warnt `require "csv"`.
+gem "csv", "~> 3.3"
